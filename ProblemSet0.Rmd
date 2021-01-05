@@ -1,30 +1,43 @@
 ---
 title: "Problem Set 0"
-author: "Samantha-Jo Caetano"
-date: "04/01/2021"
-output: pdf_document
+author: "Jane Doe"
+date: "Week 1"
+output:
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+Note: This is not a real problem set. Your first problem set is labelled ProblemSet1 and will be available later on in this Week's module and due on Thursday January 14 at 11:59 p.m. ET, after our first set of classes. The purpose of Problem Set 0 (this problem set) is to:
+  1. Show you how to access your Jupyterhub account.
+  2. Introduce you to the Jupyterhub and RStudio environment.
+  3. Knit your first RMarkdown document.
+  4. Edit and re-knit an RMarkdown document.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, include = FALSE}
+# load tidyverse data
+library(tidyverse)
 ```
 
-## Including Plots
+## Question 1
 
-You can also embed plots, for example:
+The R code chunk below contains code to load a data set of coffee ratings that we will use later in this course. Note, since the `read_csv()` function is in the tidyverse package, you'll get an error if you run the code below before running the code above.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+To "run" a code chunk, click on the green arrow in the top right corner of the gray rectangle. Clicking on the middle icon (gray arrow and green line) runs all the code chunks `before` this one, but not this code chunk - this is important if the current code chunk depends on packages loaded earlier in the document or results created earlier.
+
+```{r}
+coffee_ratings <- read.csv("coffee_ratings.csv")
+glimpse(coffee_ratings)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### (a) Use the glimpse() function to determine how many rows and columns there are in the coffee ratings dataset. Hint: You'll need to create a new R code chunk to do this.
+
+### (b) Change the property of the R code chunk below to "eval=TRUE" and knit it (click on the green arrow in the top right corner of the code chunk) to reveal a plot of overall coffee ratings. Don't worry about understanding the details of this R code yet - we will cover it in detail in Week 2!
+
+```{r, eval=FALSE}
+coffee_ratings %>% 
+  ggplot(aes(x=total_cup_points)) +
+  geom_histogram(bins=30, color="black", fill="light blue")
+```
