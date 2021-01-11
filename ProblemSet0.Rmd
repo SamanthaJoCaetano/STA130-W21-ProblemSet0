@@ -1,6 +1,6 @@
 ---
 title: "Problem Set 0"
-author: "Jane Doe"
+author: "TYPE YOUR NAME HERE"
 date: "Week 1"
 output:
   pdf_document: default
