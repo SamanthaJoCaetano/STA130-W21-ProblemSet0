@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Note: This is not a real problem set. Your first problem set is labelled ProblemSet1 and will be available later on in this Week's module and due on Thursday January 14 at 11:59 p.m. ET, after our first set of classes. The purpose of Problem Set 0 (this problem set) is to:
+Note: This is not a real problem set. Your first problem set is labelled ProblemSet1 and will be available later on in Module 1, and will be due on Thursday September 16 at 11:59am ET, a few days after our first set of classes. The purpose of Problem Set 0 (this problem set) is to:
   1. Show you how to access your Jupyterhub account.
   2. Introduce you to the Jupyterhub and RStudio environment.
   3. Knit your first RMarkdown document.
